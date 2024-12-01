@@ -37,6 +37,7 @@ public class EmployeeController {
     @DeleteMapping(value = "/deleteEmployee")
     public String deleteEmployeeUsingRequestParam(@RequestParam  Long id){
         Long aLong = employeeService.deleteEmployee(id);
+        System.out.println(aLong);
         return "Employee deleted successfully with id: "+id;
     }
 
