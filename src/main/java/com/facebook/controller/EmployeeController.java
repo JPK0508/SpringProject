@@ -27,7 +27,7 @@ public class EmployeeController {
         List<Employee> allEmployees = employeeService.getAllEmployees();
         return allEmployees;
     }
-//http://localhost:8080/employee/deleteEmployee/2
+//http://localhost:8080/employee/deleteEmployee/2/
     @DeleteMapping(value = "/deleteEmployee/{id}")
     public String deleteEmployeeUsingPathVariable(@PathVariable  Long id){
         Long aLong = employeeService.deleteEmployee(id);
