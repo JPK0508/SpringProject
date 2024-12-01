@@ -1,0 +1,23 @@
+server:
+  port: 8080
+#  port: you can give any 4 digit number as an port so when you ran your
+#  project then that project will ran on "localhost:port"
+# 127.0.0.1:8080 --> URL
+spring:
+  application:
+    name: Spring_Demo_Jay
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/jaydb
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    #    show-sql : true means we are asking jpa to show the sql in console while hitting in db.
+    hibernate:
+      ddl-auto: update
+    #      create: each time when project ran then it will drop the existing tables and recreate it.
+    #      update: it will update the queries when we ran multiple time, it will not recreate it.
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
